@@ -11,7 +11,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws --version
       - docker --version
-      - ECR_REGISTRY="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com"
+      - ECR_REGISTRY="359181413314.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com"
       - aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${ECR_REGISTRY}
       - aws ecr create-repository --repository-name ${REPO_NAME} --region ${AWS_DEFAULT_REGION} 2>/dev/null || true
   build:
