@@ -43,5 +43,3 @@ aws ecr create-repository --repository-name ${REPO_NAME} --region <region> 2>/de
 echo "Pushing to ECR..."
 docker push ${ECR_REGISTRY}/${REPO_NAME}:${IMAGE_TAG}
 
-echo "Image size:"
-docker images ${REPO_NAME}:${IMAGE_TAG} --format "table {{.Repository}}\t{{.Tag}}\t{{.Size}}"
