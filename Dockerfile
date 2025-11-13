@@ -1,5 +1,5 @@
 # 12GB Docker image for ECR testing with 3.8GB largest layer
-FROM ubuntu:22.04
+FROM public.ecr.aws/ubuntu/ubuntu:22.04
 
 # Install basic tools
 RUN apt-get update && apt-get install -y \
