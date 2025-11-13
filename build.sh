@@ -40,6 +40,5 @@ aws ecr get-login-password --region <region> | docker login --username AWS --pas
 echo "Creating ECR repository if it doesn't exist..."
 aws ecr create-repository --repository-name ${REPO_NAME} --region <region> 2>/dev/null || true
 
-echo "Pushing to ECR..."
 docker push ${ECR_REGISTRY}/${REPO_NAME}:${IMAGE_TAG}
 
